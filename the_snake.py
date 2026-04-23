@@ -40,7 +40,36 @@ clock = pygame.time.Clock()
 
 
 # Тут опишите все классы игры.
-...
+class GameObject:
+    def __init__(self, position=None, body_color=None):
+        if position is None:
+            self.position = (320, 240)
+        else:
+            self.position = position
+    def draw(self, surface):
+        pass
+
+class Apple(GameObject):
+    apple_color = (255,0,0)
+    super().randomize_position
+    self.randomaze_position
+
+    def randomaze_position(self):
+        max_x = 640 - 20
+        max_y = 480 - 20
+
+        x.random.randrage (0, max_x + 1, 20)
+        y.random.randrage (0, max_y + 1, 20)
+        self.position = (x, y)
+
+    def draw(self, surface):
+        rect = pygame.Rect(
+            self.position[0],
+            self.position[1],
+            20,
+            20
+        )
+        pygame.draw.rect(surface, self.body_color, rect)
 
 
 def main():
